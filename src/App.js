@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layouts/Main';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
+import { QuizItems } from './Loaders/QuizItems/QuizItems';
+import QuizTopics from './Componants/QuizTopics/QuizTopics';
+
+
 
 
 function App() {
@@ -15,8 +19,18 @@ function App() {
       children: [
         {
           path:'/',
-          element: <Home></Home>
+          
+          element: <Home></Home>,
+          children:[
+            {
+              path:'/',
+              loader: QuizItems,
+              element:<QuizTopics></QuizTopics>
+
+            }
+          ]
         }
+        
 
       ]
     },

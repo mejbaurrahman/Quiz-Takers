@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
 export default function Navigation() {
@@ -19,16 +20,16 @@ const active = true;
     <div className="collapse navbar-collapse" id="navbarText">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className={active? `nav-link text-decoration-underline text-warning fs-5 fw-lighter`: 'nav-link text-decoration-underline text-primary fs-5 fw-lighter'} aria-current="page" href="#">Home</a>
+        <Link className="nav-link" aria-current="page" to="/"><h4 className='text-primary fs-4 fw-semibold border-5 border-start-0 border-end-0 border-bottom-0 border-primary border-opacity-50'>Home</h4></Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-decoration-underline text-primary fs-5 fw-lighter" href="#">Quiz</a>
+        <Link className="nav-link" aria-current="page" to="/quiz"><h4 className='text-primary fs-4 fw-semibold border-5 border-start-0 border-end-0 border-bottom-0 border-primary border-opacity-50'>Quiz</h4></Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-decoration-underline text-primary fs-5 fw-lighter" href="#">Statistics</a>
+        <Link className="nav-link" aria-current="page" to="/stats"><h4 className='text-primary fs-4 fw-semibold border-5 border-start-0 border-end-0 border-bottom-0 border-primary border-opacity-50'>Statictics</h4></Link>
         </li>
-        <li className="nav-item text-decoration-underline">
-          <a className="nav-link text-decoration-underline text-primary fs-5 fw-lighter" href="#">Blog</a>
+        <li className="nav-item ">
+          <Link className="nav-link" aria-current="page" to="/blog"><h4 className='text-primary fs-4 fw-semibold border border-5 border-start-0 border-end-0 border-bottom-0 border-primary border-opacity-50'>Blog</h4></Link>
         </li>
         
       </ul>

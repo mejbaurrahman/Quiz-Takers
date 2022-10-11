@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import { QuizItems } from './Loaders/QuizItems/QuizItems';
 import QuizTopics from './Componants/QuizTopics/QuizTopics';
+import Quiz from './Pages/Quiz/Quiz';
 
 
 
@@ -29,6 +30,16 @@ function App() {
 
             }
           ]
+        },
+        {
+          path:'/quiz',
+          loader: QuizItems,
+          element:<Quiz></Quiz>
+        },
+        {
+          path:'/stats',
+          loader: QuizItems,
+          element:<Quiz></Quiz>
         }
         
 

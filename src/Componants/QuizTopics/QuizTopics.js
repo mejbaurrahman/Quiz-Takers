@@ -4,8 +4,8 @@ import QuizTopic from '../QuizTopic/QuizTopic'
 
 export default function QuizTopics() {
 
-  const quizItemLoad = useLoaderData();
-  const data = quizItemLoad.data;
+  const quizItem = useLoaderData();
+  const data = quizItem.data;
   console.log(data);
   return (
     <>

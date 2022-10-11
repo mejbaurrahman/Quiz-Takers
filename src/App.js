@@ -7,6 +7,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import { QuizItems } from './Loaders/QuizItems/QuizItems';
 import QuizTopics from './Componants/QuizTopics/QuizTopics';
 import Quiz from './Pages/Quiz/Quiz';
+import Statistics from './Pages/Statistics/Statistics';
 
 
 
@@ -39,7 +40,7 @@ function App() {
         {
           path:'/stats',
           loader: QuizItems,
-          element:<Quiz></Quiz>
+          element:<Statistics></Statistics>
         }
         
 

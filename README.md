@@ -1,4 +1,4 @@
-# Getting Started with Quiz Takers Website
+# Quiz Takers Website
 
 ##Live Website Link: 
 https://kaleidoscopic-faun-285246.netlify.app/

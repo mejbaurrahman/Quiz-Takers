@@ -11,10 +11,10 @@ const active = true;
     <nav className="navbar navbar-expand-lg" style={{backgroundColor: '#e3f2fd'}}>
     
   <div className="container">
-    <a className="navbar-brand text-primary fw-bold fs-3" href="#">
+    <Link  className="navbar-brand text-primary fw-bold fs-3" to="/">
         <img src={logo} className="rounded-circle px-2" style={{width: '50px'}} alt="" />
         Quiz Takers
-    </a>
+    </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

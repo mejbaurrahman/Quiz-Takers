@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
+
 
 export default function QuizTopic({quiz}) {
    const {id,name, logo, total} = quiz;

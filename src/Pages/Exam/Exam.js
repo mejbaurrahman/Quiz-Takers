@@ -8,6 +8,7 @@ import Result from '../../Componants/Result/Result';
 export default function Exam() {
   let numberQ =1;
   const [total, setTotal] = useState(0);
+  const [wrongTotal, setWrongTotal] = useState(0);
   const [correct, setCorrect] = useState(null);
   const [number, setNumber] = useState(0);
   
@@ -15,7 +16,7 @@ export default function Exam() {
    
   return (
     <div className='container mt-5'>
-      <div className='w-50'>
+      <div className='w-25 d-block mx-auto sticky-md-top'>
       {
         correct ===1 ? <Alert className='alert alert-success'>Answer is Right</Alert> : correct ===2 ? <Alert className='alert alert-danger'>Answer is wrong</Alert> : <p></p>
       }
@@ -30,12 +31,13 @@ export default function Exam() {
                 qN={numberQ++}
                 quizQuestion={quizQuestion}
                 setTotal={setTotal}
+                setWrongTotal={setWrongTotal}
                 setCorrect={setCorrect}
                 ></Question>)
               }
           </div>
           <div className='col-md-3 col-12 '>
-              <Result total={total} length = {questions.data.questions.length}></Result>
+              <Result total={total} wrongTotal={wrongTotal} length = {questions.data.questions.length}></Result>
           </div>
       </div>
     </div>

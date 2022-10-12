@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function QuizTopic({quiz}) {
-   const {name, logo, total} = quiz;
+   const {id,name, logo, total} = quiz;
   return (
     
     <div className='col-md-6 col-12'>
@@ -14,7 +15,7 @@ export default function QuizTopic({quiz}) {
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">Total Quiz: {total}</p>
-        <button className='btn btn-outline-primary'>Enter To Exam</button>
+        <Link to={`/quiz/${id}`}><button className='btn btn-outline-primary'>Enter To Exam</button></Link>
       </div>
     </div>
   </div>

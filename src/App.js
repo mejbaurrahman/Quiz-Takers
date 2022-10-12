@@ -8,6 +8,7 @@ import { QuizItems } from './Loaders/QuizItems/QuizItems';
 import QuizTopics from './Componants/QuizTopics/QuizTopics';
 import Quiz from './Pages/Quiz/Quiz';
 import Statistics from './Pages/Statistics/Statistics';
+import Exam from './Pages/Exam/Exam';
 
 
 
@@ -41,6 +42,15 @@ function App() {
           path:'/stats',
           loader: QuizItems,
           element:<Statistics></Statistics>
+        },
+        {
+          path:`/quiz/:id`,
+          loader: async ({params})=>{
+             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`);
+             
+          } ,
+         
+          element:<Exam></Exam>
         }
         
 

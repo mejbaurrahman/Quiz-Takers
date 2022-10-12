@@ -4,12 +4,12 @@ import Question from '../../Componants/Question/Question';
 
 export default function Exam() {
 
-       const questions= useLoaderData();
-       console.log(questions.data)
+  
+  const questions= useLoaderData();
    
   return (
     <div className='container mt-5'>
-      <h1 className='text-uppercase text-md-center fw-lighter my-3 border border-3 border-primary d-inline-block p-2'>Questions</h1>
+      <h1 className='text-uppercase text-md-center fw-lighter my-3 border border-3 border-primary d-inline-block p-2'>Quiz of {questions.data.name}</h1>
       <hr  className=''/>
       <div className='mt-3 row g-2'>
           <div className='col-md-9 col-12'>

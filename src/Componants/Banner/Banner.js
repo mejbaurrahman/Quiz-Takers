@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Banner1 from '../../images/Banner1.jpg';
 import Banner2 from '../../images/Banner2.jpg';
 import Banner3 from '../../images/Banner3.jpg';
@@ -7,45 +8,23 @@ import './Banner.css';
 
 export default function Banner() {
   return (
-    <div>
-        <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div className="carousel-inner">
-    <div className="carousel-item active position-relative" data-bs-interval="10000">
-      <img src={Banner1} className="d-block w-100" style={{height: '600px'}} alt="..."/>
-      <div className="position-absolute top-50 start-50 translate-middle heading">
-        <h1 className='fw-semibold fs-1 text-center text-primary text-opacity-50'>First slide label</h1>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
+   <div className='bg-primary bg-opacity-10 p-3'>
+     <div className='row row-cols-md-2 row-cols-1'>
+        <div className='col p-4'>
+          <img src={Banner2} style={{width: '100%'}} className='rounded' alt="" />
+        </div>
+        <div className='col d-flex justify-content-center align-items-center'>
+            <div className=''>
+                <h1 className='text-primary fw-lighter text-center'>Quiz Takers</h1>
+                <h5 className='text-secondery fw-light text-center'>This is about quiz exam website. You can easily check your knowledge about a particular topics. </h5>
+                <div className='d-flex justify-content-center'>
+                <Link to='/quiz'><button className='btn btn-outline-primary'>Go to Topics</button></Link>
+                </div>
+                
+            </div>
+        </div>
+
     </div>
-    <div className="carousel-item position-relative" data-bs-interval="2000">
-      <img src={Banner2} className="d-block w-100" style={{height: '600px'}} alt="..."/>
-      <div className="position-absolute top-50 start-50 translate-middle heading">
-        <h1 className='fw-semibold fs-1 text-center text-primary text-opacity-50'>First slide label</h1>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div className="carousel-item position-relative">
-      <img src={Banner3} className="d-block w-100 " style={{height: '600px'}} alt="..."/>
-      <div className="position-absolute top-50 start-50 translate-middle heading">
-        <h1 className='fw-semibold fs-1 text-center text-primary text-opacity-50'>First slide label</h1>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-    </div>
+   </div>
   )
 }

@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import QuizOption from '../QuizOption/QuizOption';
 
 let total = 0; 
-export default function Question({quizQuestion, setTotal}) {
+export default function Question({quizQuestion, setTotal, setCorrect}) {
     const {question, options, correctAnswer} = quizQuestion;
     const [answer, setAnswer] = useState(null);
     const [design, setDesign] = useState(null);
     const [clickedOption, setClickedOption] = useState('');
     const [giveAnswer, setGiveAnswer] = useState(false);
     const [count, setCount] = useState(0);
+    
     
    
    
@@ -17,9 +18,12 @@ export default function Question({quizQuestion, setTotal}) {
             setGiveAnswer(true);
             total++;
             setTotal(total);
+            setCorrect(1)
            
         }else{
             setGiveAnswer(false);
+           setCorrect(2);
+            
         }
         
         setClickedOption(ans);
@@ -49,8 +53,10 @@ export default function Question({quizQuestion, setTotal}) {
             getAnswer={getAnswer}
             giveAnswer ={giveAnswer}
             correctAnswer = {correctAnswer}
-            ></QuizOption>) 
-       }
+         ></QuizOption>) 
+       } 
+      
+       
         </div>
 </div>
   )

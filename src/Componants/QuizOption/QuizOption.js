@@ -1,31 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export default function ({option, design,getAnswer, setDesign, correctAnswer}) {
-
-
-    
-    const checkAnswer = (option)=>{
-        if(correctAnswer==option){
-            setDesign(1)
-            
-            
-        }else{
-            setDesign(2)
-           
-        }
-    }
-
-    // className=''
+export default function QuizOption({option, getAnswer, clickedOption, giveAnswer, correctAnswer}) {
   return (
     <div className='col '>
-    <div  className={design === 1 ? `border border-opacity-25 border-primary py-3 bg-success ps-2`: `border border-opacity-25 border-primary py-3 bg-danger ps-2` }>
-    <div class="form-check">
-        <input onClick={()=>checkAnswer(option)} class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4"/>
-        <label class="form-check-label" for="flexRadioDefault4">
-            {option}
-        </label>
-    </div>
-    </div>
-    </div>
+    <div  className= 'border border-opacity-25 border-primary py-3 ps-2 rounded' style={giveAnswer === true ? ( clickedOption === option ? {backgroundColor: 'green'}:{backgroundColor: 'white'}) : (clickedOption === option? {backgroundColor: 'red'}: (correctAnswer===option && clickedOption?  {backgroundColor: 'green'}: {backgroundColor:'white'})) } >
+   <div class="form-check d-flex">
+   <input style={clickedOption? {display: 'none'}: {display:'block'}}  type="radio"  onClick={!clickedOption? ()=>getAnswer(option): ()=>{}} id={option} name="fav_language" value={option}/>
+        <label class="form-check-label" for={ option}>{option}</label>
+</div>
+</div>
+</div>
   )
 }

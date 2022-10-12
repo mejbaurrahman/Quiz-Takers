@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import Question from '../../Componants/Question/Question';
+import Result from '../../Componants/Result/Result';
 
 export default function Exam() {
 
+  const [total, setTotal] = useState(0);
   
   const questions= useLoaderData();
    
@@ -17,11 +19,12 @@ export default function Exam() {
                 questions.data.questions.map(quizQuestion=><Question
                 key={quizQuestion.id}
                 quizQuestion={quizQuestion}
+                setTotal={setTotal}
                 ></Question>)
               }
           </div>
-          <div className='col-md-3 col-12'>
-
+          <div className='col-md-3 col-12 '>
+              <Result total={total} length = {questions.data.questions.length}></Result>
           </div>
       </div>
     </div>

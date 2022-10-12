@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Banner1 from '../../images/Banner1.jpg';
-import Banner2 from '../../images/Banner2.jpg';
 import Banner3 from '../../images/Banner3.jpg';
 
 import './Banner.css';
@@ -11,7 +9,7 @@ export default function Banner() {
    <div className='bg-primary bg-opacity-10 p-3'>
      <div className='row row-cols-md-2 row-cols-1'>
         <div className='col p-4'>
-          <img src={Banner2} style={{width: '100%'}} className='rounded' alt="" />
+          <img src={Banner3} style={{width: '100%'}} className='rounded' alt="" />
         </div>
         <div className='col d-flex justify-content-center align-items-center'>
             <div className=''>

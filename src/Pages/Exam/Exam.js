@@ -4,10 +4,12 @@ import { useLoaderData } from 'react-router-dom'
 import Question from '../../Componants/Question/Question';
 import Result from '../../Componants/Result/Result';
 
-export default function Exam() {
 
+export default function Exam() {
+  let numberQ =1;
   const [total, setTotal] = useState(0);
   const [correct, setCorrect] = useState(null);
+  const [number, setNumber] = useState(0);
   
   const questions= useLoaderData();
    
@@ -25,6 +27,7 @@ export default function Exam() {
               {
                 questions.data.questions.map(quizQuestion=><Question
                 key={quizQuestion.id}
+                qN={numberQ++}
                 quizQuestion={quizQuestion}
                 setTotal={setTotal}
                 setCorrect={setCorrect}

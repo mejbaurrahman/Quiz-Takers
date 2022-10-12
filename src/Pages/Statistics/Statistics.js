@@ -17,7 +17,7 @@ export default function Statistics() {
         <Tooltip />
         </PieChart>
         </div>
-        <div className='col-md-6 col-12 d-flex justify-content-start align-items-center'>
+        <div className='col-md-6 col-12 d-flex justify-content-center align-items-center'>
           <ul className='text-decoration-none'>
           {
             quizItem.data.map(quiz=><li 

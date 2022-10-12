@@ -14,7 +14,7 @@ export default function QuizTopic({quiz}) {
     <div className="col-md-8">
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
-        <p className="card-text">Total Quiz: {total}</p>
+        <p className="card-text">Total Questions: {total}</p>
         <Link to={`/quiz/${id}`}><button className='btn btn-outline-primary'>Enter To Exam</button></Link>
       </div>
     </div>

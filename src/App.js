@@ -9,6 +9,7 @@ import QuizTopics from './Componants/QuizTopics/QuizTopics';
 import Quiz from './Pages/Quiz/Quiz';
 import Statistics from './Pages/Statistics/Statistics';
 import Exam from './Pages/Exam/Exam';
+import Blog from './Pages/Blog/Blog';
 
 
 
@@ -51,6 +52,10 @@ function App() {
           } ,
          
           element:<Exam></Exam>
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
         
 
